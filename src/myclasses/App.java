@@ -14,19 +14,24 @@ import java.util.Scanner;
  */
 public class App {
     public void run(){
-        System.out.println("Привеееет, группа JPTVR18!");
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Напишите свое имя латинскими буквами: ");
-        String myName = scanner.nextLine();
-        System.out.println("Hi, "+myName);
-        Random random = new Random();
-        int randomNumber = random.nextInt(5);
-        System.out.println("Задумано число от 0 до 4. Угадай?");
-        int userNumber = scanner.nextInt();
-        if(userNumber == randomNumber){
-            System.out.println("Ты угадал, молодец!");
-        }else{
-            System.out.println("Не повезло :(, задумано число: "+randomNumber);
-        }
+        
+            System.out.println("Привеееет, группа JPTVR18!");
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Напишите свое имя латинскими буквами: ");
+            String myName = scanner.nextLine();
+            System.out.println("Hi, "+myName);
+            Random random = new Random();
+        do{   
+            int randomNumber = random.nextInt(5);
+            System.out.println("Задумано число от 0 до 4. Угадай?");
+            int userNumber = scanner.nextInt();
+            if(userNumber == randomNumber){
+                System.out.println("Ты угадал, молодец!");
+                break;
+            }else{
+                System.out.println("Не повезло :(, задумано число: "+randomNumber);
+            }
+            
+        }while(true);
     }
 }
