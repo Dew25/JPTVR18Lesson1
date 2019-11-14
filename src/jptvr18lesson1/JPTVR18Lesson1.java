@@ -8,6 +8,7 @@ package jptvr18lesson1;
 import java.util.Scanner;
 import myclasses.App;
 import myclasses.Task2;
+import myclasses.Task4;
 
 /**
  *
@@ -23,6 +24,7 @@ public class JPTVR18Lesson1 {
         System.out.println("Выберите здадачу:");
         System.out.println("1. Игра - угадай задуманное число");
         System.out.println("2. Разбор трехзначного числа");
+        System.out.println("3. Вывести массив\n\tиз указанного количества елементов\n\tв виде матрицы указанного размера");
         System.out.println("Введите номер задачи: ");
         int numberTask = scanner.nextInt();
         switch (numberTask) {
@@ -34,6 +36,10 @@ public class JPTVR18Lesson1 {
                 Task2 task2 = new Task2();
                 task2.run();
                 break;
+            case 3:
+                Task4 task4 = new Task4();
+                task4.run();
+                break;    
             
         }
         
